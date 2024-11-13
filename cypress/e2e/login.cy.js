@@ -1,6 +1,6 @@
 describe('Проверка авторизации', function () {
-
-   it('Верный логин и верный пароль', function () {
+   
+it('Верный логин и верный пароль', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
 
@@ -8,14 +8,13 @@ describe('Проверка авторизации', function () {
         cy.get('#pass').type('iLoveqastudio1'); 
         cy.get('#loginButton').click(); 
 
-        cy.wait(2000);
+        cy.wait(1000);
 
         cy.get('#messageHeader').contains('Авторизация прошла успешно'); 
         cy.get('#messageHeader').should('be.visible'); 
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
     })
-
-   it('Проверка на приведение к строчным буквам в логине', function () {
+it('Проверка на приведение к строчным буквам в логине', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
 
@@ -27,8 +26,8 @@ describe('Проверка авторизации', function () {
         cy.get('#messageHeader').should('be.visible'); 
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
     })
-
-      it('Верный логин и неверный пароль', function () {
+   
+it('Верный логин и неверный пароль', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
 
@@ -40,8 +39,8 @@ describe('Проверка авторизации', function () {
         cy.get('#messageHeader').should('be.visible'); 
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
     })
-
-        it('Неверный логин и верный пароль', function () {
+   
+it('Неверный логин и верный пароль', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
 
@@ -53,8 +52,8 @@ describe('Проверка авторизации', function () {
         cy.get('#messageHeader').should('be.visible'); 
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
     })
-
-            it('Проверка валидации', function () {
+   
+it('Проверка валидации', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
 
@@ -67,7 +66,7 @@ describe('Проверка авторизации', function () {
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
     })
 
-                it('Проверка вост.пароля', function () {
+it('Проверка вост.пароля', function () {
         cy.visit('https://login.qa.studio/'); 
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); 
         cy.get('#forgotEmailButton').click(); 
