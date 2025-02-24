@@ -50,3 +50,7 @@ npx cypress run --spec cypress/e2e/lesson_locators.cy.js --browser chrome
 
 Ожидаемый результат: получим отчет о прохождении тестов.
 ![image](https://raw.githubusercontent.com/ArtyomPilipenko/autotests_cypress/refs/heads/master/Cypress_UI.png)
+
+<h2>Автор</h2>
+
+Артём Пилипенко ([@artyom_pilipenko](https://t.me/artyom_pilipenko))
